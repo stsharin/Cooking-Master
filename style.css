@@ -1,3 +1,16 @@
-body{
+*{
     background-color: #EDD263;
 }
+/* #showResult{
+    display: none ;
+    width: 450px;
+  }
+.thumbnail{
+    width: 200px;
+  }
+#showResult{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+} */
+  
