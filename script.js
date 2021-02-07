@@ -9,6 +9,7 @@ searchButton.addEventListener('click', (event) => {
 
 // Getting User Input
 function getUserData(userInput) {
+    result.style.display = "none";
     const meal = document.getElementById('meal');
     let url = "";
     if (userInput.length === 1) {
@@ -30,11 +31,12 @@ function getUserData(userInput) {
 
 // displaying search result
 const displayData = data => {
+    
     let text = "";
     if(data.meals){
         data.meals.forEach(item => {
             const div = document.createElement('div');
-            const allMealInfo = `
+            const allMealInfo = text + `
             <button onclick="showMealDetails('${item.strMeal}')" class="cardBtn">
                 <div>
                     <div>
