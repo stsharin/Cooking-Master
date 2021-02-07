@@ -3,6 +3,9 @@
     font-family: 'Roboto', sans-serif;
     
 }
+body{
+    background-color: #EDD263;
+}
 .main-nav{
     margin-left: 800px;
 }
@@ -16,7 +19,9 @@
     margin: 0 auto;
   }
 #meal{
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-gap: 30px; */
 }
 .thumbnail{
     width: 200px;
