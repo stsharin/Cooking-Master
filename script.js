@@ -29,22 +29,32 @@ function getUserData(userInput) {
 
 // displaying search result
 const displayData = data => {
-    data.meals.forEach(item => {
-        const div = document.createElement('div');
-        const allMealInfo = `
-        <button onclick="showMealDetails('${item.strMeal}')" class="cardBtn">
-            <div>
+    let html = "";
+    if(data.meals){
+        data.meals.forEach(item => {
+            const div = document.createElement('div');
+            const allMealInfo = html + `
+            <button onclick="showMealDetails('${item.strMeal}')" class="cardBtn">
                 <div>
-                    <img class="thumbnail" src="${item.strMealThumb}"/>
-                    <div class="bg-white">
-                        <h5 class="bg-white">${item.strMeal}</h5>   
+                    <div>
+                        <img class="thumbnail" src="${item.strMealThumb}"/>
+                        <div class="bg-white">
+                            <h5 class="bg-white">${item.strMeal}</h5>   
+                        </div>
                     </div>
-                </div>
-            </div> 
-        </button>`;
-        div.innerHTML = allMealInfo;
+                </div> 
+            </button>`;
+            div.innerHTML = allMealInfo;
+            meal.appendChild(div);
+        });
+    }
+    else{
+        const div = document.createElement('div');
+        html = html + `<h1>Sorry, we didn't find any meal</h1>`;
+        div.innerHTML = html;
         meal.appendChild(div);
-    });
+    }
+    
 }
 
 // each meal details
