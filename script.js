@@ -52,7 +52,10 @@ const displayData = data => {
     else{
         result.style.display = "none"
         const div = document.createElement('div');
-        text = `<h1 class="error-text">Sorry! the food is not available.</h1>`;
+        text = `
+        <div>
+            <h1 class="error-text">Opps! the food is not available. Try another one :)</h1>
+        </div>`;
         div.innerHTML = text;
         meal.appendChild(div);
     }

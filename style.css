@@ -48,3 +48,9 @@ ul li{
     width: 300px;
     align-items: center;
 }
+.error-text{
+    text-align: center;
+    width: 1000px;
+    color: black;
+    font-weight: 700;
+}
