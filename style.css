@@ -51,6 +51,6 @@ ul li{
 .error-text{
     text-align: center;
     width: 1000px;
-    color: black;
+    color: rgb(97, 97, 97);
     font-weight: 700;
 }
