@@ -14,7 +14,7 @@ function getUserData(userInput) {
         url = `https://www.themealdb.com/api/json/v1/1/search.php?f=${userInput}`;
         meal.innerHTML = null;
         meal.innerHTML = null;
-    } 
+    }  
     else {
         url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${userInput}`;
         meal.innerHTML = null;
@@ -61,7 +61,7 @@ const showMealDetails = (string) => {
                 if (string === eachItem.strMeal) {
                     mealInfo = `
                     <div class="bg-white item-details">
-                        <img src="${eachItem.strMealThumb}" class="card-img-top ">
+                        <img src="${eachItem.strMealThumb}" class="card-img-top">
                         <div class="bg-white">
                             <h3 class="bg-white">${eachItem.strMeal}</h3>
                             <p class="bg-white">Ingredients</p>
@@ -73,6 +73,10 @@ const showMealDetails = (string) => {
                                     <li>${eachItem.strIngredient4}</li>
                                     <li>${eachItem.strIngredient5}</li>
                                     <li>${eachItem.strIngredient6}</li>
+                                    <li>${eachItem.strIngredient7}</li>
+                                    <li>${eachItem.strIngredient8}</li>
+                                    <li>${eachItem.strIngredient9}</li>
+                                    <li>${eachItem.strIngredient10}</li>
                                 </ul>
                             </div>
                         </div>
