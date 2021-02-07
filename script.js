@@ -29,11 +29,11 @@ function getUserData(userInput) {
 
 // displaying search result
 const displayData = data => {
-    let html = "";
+    let text = "";
     if(data.meals){
         data.meals.forEach(item => {
             const div = document.createElement('div');
-            const allMealInfo = html + `
+            const allMealInfo = `
             <button onclick="showMealDetails('${item.strMeal}')" class="cardBtn">
                 <div>
                     <div>
@@ -50,8 +50,8 @@ const displayData = data => {
     }
     else{
         const div = document.createElement('div');
-        html = html + `<h1>Sorry, we didn't find any meal</h1>`;
-        div.innerHTML = html;
+        text = `<h1 class="error-text">Sorry! the food is not available.</h1>`;
+        div.innerHTML = text;
         meal.appendChild(div);
     }
     
