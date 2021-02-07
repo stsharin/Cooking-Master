@@ -1,3 +1,4 @@
+const result = document.getElementById('mealDetails');
 // search button event handler
 const searchButton = document.getElementById('searchBtn');
 searchButton.addEventListener('click', (event) => {
@@ -49,6 +50,7 @@ const displayData = data => {
         });
     }
     else{
+        result.style.display = "none"
         const div = document.createElement('div');
         text = `<h1 class="error-text">Sorry! the food is not available.</h1>`;
         div.innerHTML = text;
@@ -59,7 +61,6 @@ const displayData = data => {
 
 // each meal details
 const showMealDetails = (string) => {
-    const result = document.getElementById('mealDetails');
     url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${string}`;
     fetch(url)
         .then(res => res.json())
