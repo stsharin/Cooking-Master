@@ -57,7 +57,7 @@ const displayData = data => {
         const div = document.createElement('div');
         text = `
         <div>
-            <h1 class="error-text">Opps! the food is not available. Try another one :)</h1>
+            <h1 class="error-text">Opps! the meal is not available. Try another one :)</h1>
         </div>`;
         div.innerHTML = text;
         meal.appendChild(div);
