@@ -35,16 +35,15 @@ const displayData = data => {
         const div = document.createElement('div');
 
         const allMealInfo = `
-        <button onclick="showMealDetails('${item.strMeal}')">
-        <div class="col">
-            <div class="card h-100">
-                <img class="card-img-top thumbnail" src="${item.strMealThumb}"/>
-                <div class="card-body">
-                    <h5 class="card-title mx-auto">${item.strMeal}</h5>
-                    
+        <button onclick="showMealDetails('${item.strMeal}')" class="cardBtn">
+            <div>
+                <div>
+                    <img class="thumbnail" src="${item.strMealThumb}"/>
+                    <div class="bg-white">
+                        <h5 class="bg-white">${item.strMeal}</h5>   
+                    </div>
                 </div>
-            </div>
-        </div> 
+            </div> 
         </button>`;
         div.innerHTML = allMealInfo;
         meal.appendChild(div);

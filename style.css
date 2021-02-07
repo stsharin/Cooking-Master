@@ -1,16 +1,27 @@
 *{
     background-color: #EDD263;
+    font-family: 'Roboto', sans-serif;
 }
-/* #showResult{
+#mealDetails{
     display: none ;
     width: 450px;
+    border-radius: 10px;
   }
 .thumbnail{
     width: 200px;
+    /* border-radius: 10px; */
   }
-#showResult{
+.cardBtn{
+    border: white;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
-} */
+    width: 100px;
+    /* border-radius: 10px; */
+}
+.bg-white{
+    background-color: white;
+    padding: 10px;
+    
+}
   
