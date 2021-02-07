@@ -66,22 +66,20 @@ const showMealDetails = (string) => {
             data.meals.forEach(eachItem => {
                 if (string === eachItem.strMeal) {
                     mealInfo = `
-                    <img src="${eachItem.strMealThumb}" class="card-img-top">
-                    <div class="card-body">
-                    <h3 class="card-title">${eachItem.strMeal}</h3>
-                    <p>Ingredients</p>
-                    <ul>                    
-                        <li>${eachItem.strIngredient1}</li>
-                        <li>${eachItem.strIngredient2}</li>
-                        <li>${eachItem.strIngredient3}</li>
-                        <li>${eachItem.strIngredient4}</li>
-                        <li>${eachItem.strIngredient5}</li>
-                        <li>${eachItem.strIngredient6}</li>
-                        <li>${eachItem.strIngredient7}</li>
-                        <li>${eachItem.strIngredient8}</li>
-                        <li>${eachItem.strIngredient9}</li>
-                        <li>${eachItem.strIngredient10}</li>
-                    </ul>
+                    <div>
+                        <img src="${eachItem.strMealThumb}" class="card-img-top">
+                        <div class="card-body">
+                            <h3>${eachItem.strMeal}</h3>
+                            <p>Ingredients</p>
+                            <ul>                    
+                                <li>${eachItem.strIngredient1}</li>
+                                <li>${eachItem.strIngredient2}</li>
+                                <li>${eachItem.strIngredient3}</li>
+                                <li>${eachItem.strIngredient4}</li>
+                                <li>${eachItem.strIngredient5}</li>
+                                <li>${eachItem.strIngredient6}</li>
+                            </ul>
+                        </div>
                     </div> `;
                 }
             })
