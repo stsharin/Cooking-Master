@@ -14,8 +14,8 @@ function getUserData(userInput) {
         url = `https://www.themealdb.com/api/json/v1/1/search.php?f=${userInput}`;
         meal.innerHTML = null;
         meal.innerHTML = null;
-
-    } else {
+    } 
+    else {
         url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${userInput}`;
         meal.innerHTML = null;
         meal.innerHTML = null;
@@ -29,11 +29,8 @@ function getUserData(userInput) {
 
 // displaying search result
 const displayData = data => {
-
     data.meals.forEach(item => {
-
         const div = document.createElement('div');
-
         const allMealInfo = `
         <button onclick="showMealDetails('${item.strMeal}')" class="cardBtn">
             <div>
@@ -47,7 +44,6 @@ const displayData = data => {
         </button>`;
         div.innerHTML = allMealInfo;
         meal.appendChild(div);
-
     });
 }
 
@@ -58,27 +54,27 @@ const showMealDetails = (string) => {
     fetch(url)
         .then(res => res.json())
         .then(data => {
-
             result.style.display = "block"
             const div = document.createElement('div');
             let mealInfo;
-
             data.meals.forEach(eachItem => {
                 if (string === eachItem.strMeal) {
                     mealInfo = `
-                    <div>
-                        <img src="${eachItem.strMealThumb}" class="card-img-top">
-                        <div class="card-body">
-                            <h3>${eachItem.strMeal}</h3>
-                            <p>Ingredients</p>
-                            <ul>                    
-                                <li>${eachItem.strIngredient1}</li>
-                                <li>${eachItem.strIngredient2}</li>
-                                <li>${eachItem.strIngredient3}</li>
-                                <li>${eachItem.strIngredient4}</li>
-                                <li>${eachItem.strIngredient5}</li>
-                                <li>${eachItem.strIngredient6}</li>
-                            </ul>
+                    <div class="bg-white item-details">
+                        <img src="${eachItem.strMealThumb}" class="card-img-top ">
+                        <div class="bg-white">
+                            <h3 class="bg-white">${eachItem.strMeal}</h3>
+                            <p class="bg-white">Ingredients</p>
+                            <div>
+                                <ul>                    
+                                    <li>${eachItem.strIngredient1}</li>
+                                    <li>${eachItem.strIngredient2}</li>
+                                    <li>${eachItem.strIngredient3}</li>
+                                    <li>${eachItem.strIngredient4}</li>
+                                    <li>${eachItem.strIngredient5}</li>
+                                    <li>${eachItem.strIngredient6}</li>
+                                </ul>
+                            </div>
                         </div>
                     </div> `;
                 }
