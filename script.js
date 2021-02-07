@@ -1,4 +1,5 @@
 const result = document.getElementById('mealDetails');
+
 // search button event handler
 const searchButton = document.getElementById('searchBtn');
 searchButton.addEventListener('click', (event) => {
